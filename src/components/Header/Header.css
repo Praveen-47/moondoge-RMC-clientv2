@@ -1,0 +1,94 @@
+.header-wrapper {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    box-shadow: -2px 4px 42px -11px #FFFFFF;
+    border-radius: 50px;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+    margin: 0px 20px;
+
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.06em;
+    transition: 0.3s;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.stacke-btn {
+    background: #F221C4;
+}
+
+.unstacke-btn, .claim-btn {
+    background: #2181F2;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 15px #fff;
+    transition: 0.3s;
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    .btn {
+        box-shadow: -2px 2px 20px -11px #FFFFFF;
+        border-radius: 30px;
+        padding: 10px 25px;
+        border: none;
+        cursor: pointer;
+        margin: 0px 20px;
+    
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 23px;
+        line-height: 30px;
+        letter-spacing: 0.03em;
+        transition: 0.3s;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}
+
+
+
+
+/* orginal btn  */
+/* .btn { 
+    box-shadow: -2px 4px 42px -11px #FFFFFF;
+    border-radius: 50px;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+    margin: 0px 20px;
+
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.06em;
+    transition: 0.3s;
+    text-align: center;
+    color: #FFFFFF;
+} */
