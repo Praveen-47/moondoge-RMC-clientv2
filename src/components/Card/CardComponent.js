@@ -20,7 +20,7 @@ const CardComponent = ({
       {/* <div className='img' /> */}
       <div className="card-body">
         <img
-          src={`https://bafybeigrpdmlzlzy7etwkjxkq5wvbpuhmlk4aoszt57s3vvtanvyc2avwm.ipfs.dweb.link/${1}.png`}
+          src={image}
           alt="img"
           className="image"
         />

@@ -75,23 +75,9 @@ function App() {
   const [stakeId, setStakeId] = useState(null);
   const [unstakeId, setUnstakeId] = useState(null);
   const [stakes, setStake] = useState([
-    // { image: img_01, id: "1" },
-    { image: img_01, id: "3" },
-    // { image: img_01, id: "4" },
-    // {image:img_01, id:'5'},
-    // {image:img_01, id:'6'},
-    // {image:img_01, id:'7'},
-    // {image:img_01, id:'8'}
+    // { image: img_01, id: "3" },
   ]);
-  const [unstakes, setUnstake] = useState([
-    // { image: img_01, id: "1" },
-    // { image: img_01, id: "4" },
-    // { image: img_01, id: "14" },
-    // { image: img_01, id: "15" },
-    // { image: img_01, id: "16" },
-    // { image: img_01, id: "17" },
-    // { image: img_01, id: "18" },
-  ]);
+  const [unstakes, setUnstake] = useState([]);
 
   //blockchain
 
@@ -105,11 +91,6 @@ function App() {
   const [state, setState] = useState(null);
   const [tokenId, setTokenId] = useState(null);
   const [nftAssets, setNftAssets] = useState([]);
-  const [nftId, setNftId] = useState(null);
-  const [unstakeNftId, setunstakeNftId] = useState(null);
-  const [total, setTotal] = useState(1);
-  const [totalSupply, setTotalSupply] = useState(0);
-  const [maxSupply, setMaxSupply] = useState(0);
   const [stakedIds, setStakedTokenIds] = useState([]);
   const [stakedNftsData, setStakedNftsData] = useState([]);
 
@@ -190,7 +171,7 @@ function App() {
 
   useEffect(() => {
     if (nftData) {
-      setNftAssets(
+      setStake(
         nftData.assets?.filter(
           (el) => el.owner.address === account.toLowerCase()
         )
@@ -198,10 +179,10 @@ function App() {
     }
   }, [nftData]);
 
-  console.log("nft data for stake section===>", nftAssets);
+  console.log("nft data for stake section===>", stakes);
 
   useEffect(() => {
-    if (stakedIds && nftAssets) {
+    if (stakedIds && stakes) {
       stakedIds.forEach((element) => {
         collectionContract &&
           axios
@@ -219,7 +200,7 @@ function App() {
     }
   }, [stakedIds, account]);
 
-  console.log("staked nfts data for unstake section===>", stakedNftsData);
+  console.log("staked nfts data for unstake section===>", unstakes); //stakedNftsData
 
   // useEffect(() => {
   //   account && stakingContract && earningInfo();
